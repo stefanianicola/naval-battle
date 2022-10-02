@@ -1,0 +1,27 @@
+{
+  "name": "naval-battle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanianicola/naval-battle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanianicola/naval-battle/issues"
+  },
+  "homepage": "https://github.com/stefanianicola/naval-battle#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "babel-jest": "^29.1.2",
+    "jest": "^29.1.2"
+  }
+}
