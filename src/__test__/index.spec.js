@@ -19,4 +19,11 @@ describe('game naval battle', () => {
       expect(createGrid(2)).toEqual([0, 0, 0, 0]);
     });
   });
+  // crear los barcos
+  // crear la grilla con los barcos aleatoreamente para la pc
+  // crear la grilla vacia del usuario
+  // crear interaccion del usuario para posicionar los barcos
+  // crear interaccion del usuario para hundir barcos
+  // crear interaccion aleatoria de la pc para hundir barcos del user
+  // chequear si quedan barcos en flote para ver si existe algun ganador
 });
