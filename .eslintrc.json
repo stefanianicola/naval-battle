@@ -14,9 +14,10 @@
   ],
   "overrides": [],
   "parserOptions": {
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
+    "parser": "babel-eslint"
   },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "warn"
   }
 }
