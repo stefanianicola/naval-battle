@@ -47,7 +47,23 @@ describe('create ship', () => {
 
 // Pintar la barcos en la pantalla
 describe('ship in the browser', () => {
-  it('should display the ship', () => {});
+  it('should display horizontal ship', () => {
+    document.body.innerHTML = '<div id="ships"></div>';
+    const ship = { position: 'horizontal', root: 3 };
+    indexFile.drawShip(ship);
+    if (ship.position === 'horizontal') {
+      expect(document.querySelectorAll('.row').length).toEqual(1);
+    } else {
+      expect(document.querySelectorAll('.row').length).toEqual(ship.size);
+    }
+  });
+  it('should display all ships', () => {
+    const drawShip = jest.fn();
+    const allShips = [];
+    indexFile.drawAllShips();
+    expect(drawShip).toHaveBeenCalledTimes(allShips.length);
+    // expect(document.querySelectorAll('.ship').length).toEqual(3);
+  });
 });
 
 describe('isAsunken algorithm', () => {

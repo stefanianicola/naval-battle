@@ -36,6 +36,47 @@ export const createShip = (root, position) => {
   }
 };
 
+export const drawShip = (ships) => {
+  const ship = document.getElementById('ships');
+  const container = createElement('containerShip');
+  let row, cellEl;
+  if (ships.position === 'horizontal') {
+    row = createElement('row');
+    container.appendChild(row);
+
+    ships.size.forEach(() => {
+      cellEl = createElement('ship');
+      return row.appendChild(cellEl);
+    });
+  } else {
+    // eslint-disable-next-line array-callback-return
+    ships.size.forEach(() => {
+      row = createElement('row');
+      container.appendChild(row);
+      const cellEl = createElement('ship');
+      return row.appendChild(cellEl);
+    });
+  }
+
+  if (ship !== null) {
+    ship.appendChild(container);
+  }
+};
+
+export const drawAllShips = () => {
+  const allShips = [
+    new Ship(5, 'horizontal'),
+    new Ship(5, 'vertical'),
+    new Ship(4, 'horizontal'),
+    new Ship(4, 'vertical'),
+    new Ship(3, 'horizontal'),
+    new Ship(3, 'vertical'),
+    new Ship(2, 'horizontal'),
+    new Ship(2, 'vertical'),
+  ];
+  allShips.map((n) => drawShip(n));
+};
+
 export const isAsunken = (boat) => (boat === 1 ? 1 : 0);
 
 export const createGrid = (x) => {
@@ -44,3 +85,4 @@ export const createGrid = (x) => {
 };
 
 drawGrid(createGrid(10));
+drawAllShips();

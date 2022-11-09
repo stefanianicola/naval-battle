@@ -11,7 +11,7 @@ export class Ship {
 
   // Método
   calcSize() {
-    return new Array(this.root).fill(0);
+    return new Array(this.root).fill(1);
   }
 }
 
